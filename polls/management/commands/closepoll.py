@@ -6,4 +6,4 @@ class Command(BaseCommand):
         parser.add_argument("poll_ids", nargs="+", type=int)
 
     def handle(self, *args, **options):
-        pass
+        self.stdout.write(f"Closing poll {options['poll_ids'][0]}")
